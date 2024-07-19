@@ -4,10 +4,6 @@ import "../style/P1.css";
 function FormP1({ form, handleChange, handleSubmit }) {
   return (
     <div>
-      <h3>
-        แบบประเมินผลการปฏิบัติงานของพนักงาน อผศ.
-        และลูกจ้างประจำหน่วยงานกิจการพิเศษ
-      </h3>
       <form onSubmit={handleSubmit} className="form-container">
         <h5>ตอนที่ 1 : ข้อมูลผู้รับการประเมิน (ผู้รับการประเมินเป็นผู้กรอก)</h5>
         <div className="form-group">
@@ -18,6 +14,8 @@ function FormP1({ form, handleChange, handleSubmit }) {
             name="name"
             value={form.name}
             onChange={handleChange}
+            placeholder="โปรดระบุ"
+            required
           />
         </div>
         <div className="form-group">
@@ -28,6 +26,8 @@ function FormP1({ form, handleChange, handleSubmit }) {
             name="department"
             value={form.department}
             onChange={handleChange}
+            placeholder="โปรดระบุ"
+            required
           />
         </div>
         <div className="form-group">
@@ -38,6 +38,8 @@ function FormP1({ form, handleChange, handleSubmit }) {
             name="agency"
             value={form.agency}
             onChange={handleChange}
+            placeholder="โปรดระบุ"
+            required
           />
         </div>
       </form>

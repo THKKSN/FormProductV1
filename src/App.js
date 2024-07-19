@@ -3,12 +3,11 @@ import axios from "axios";
 import "./style/Main.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import FormP1 from "./compornent/FormP1";
-import FormP2 from "./compornent/FormP2";
+// import FormP2 from "./compornent/FormP2";
 import FormP3 from "./compornent/FormP3";
 
-
 function App() {
-  const [form, setForm] = useState({
+  const [formValues, setFormValues] = useState({
     name: "",
     department: "",
     agency: "",
@@ -16,8 +15,8 @@ function App() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setForm({
-      ...form,
+    setFormValues({
+      ...formValues,
       [name]: value,
     });
   };
@@ -25,7 +24,7 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:5000/submit", form)
+      .post("http://localhost:5000/submit", formValues)
       .then((response) => {
         console.log(response.data);
         alert("Form submitted successfully!");
@@ -34,12 +33,19 @@ function App() {
         console.error("There was an error!", error);
       });
   };
-
   return (
     <div>
-      <FormP1 form={form} handleChange={handleChange} handleSubmit={handleSubmit} />
+      <h3>
+        แบบประเมินผลการปฏิบัติงานของพนักงาน อผศ.
+        และลูกจ้างประจำหน่วยงานกิจการพิเศษ
+      </h3>
+      <FormP1
+        form={formValues}
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
+      />
       {/* <FormP2 form={form} handleChange={handleChange} handleSubmit={handleSubmit} /> */}
-      <FormP3/>
+      <FormP3 />
     </div>
   );
 }
