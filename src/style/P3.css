@@ -11,6 +11,10 @@ p{
     color: #000;
     font-size: 16px;
 }
+
+.p-header{
+  font-size: 20px;
+}
 .point-container {
     display: flex;
     align-items: center;

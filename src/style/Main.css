@@ -17,3 +17,14 @@ body{
   text-align: center;
 }
 
+.submit{
+  border-radius: 25px ;
+  background-color: #35792f;
+  padding: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.submit:hover{
+  background-color: #4eaf45;
+}
