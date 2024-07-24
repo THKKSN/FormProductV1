@@ -5,7 +5,7 @@ const FormP3one = ({ formValues, handleChange }) => {
   return (
     <div>
       <h5>ตอนที่ 3 การประเมินค่า ฯ (ผู้ประเมินเป็นผู้กรอก)</h5>
-      <p className="p-header">ผลสัมฤทธิ์ของงาน</p>
+      <h6>ผลสัมฤทธิ์ของงาน</h6>
       <p className="form-group">1.1 กลุ่มงานประจำ</p>
       <div>
         <p>1.1.1 ปริมาณงาน</p>
@@ -409,7 +409,7 @@ const FormP3one = ({ formValues, handleChange }) => {
           />
           ใช้ทรัพยากรมาก เกิดการสูญเสียโดยไม่จำเป็น (6)
         </label>
-      </div>     
+      </div>
     </div>
   );
 };

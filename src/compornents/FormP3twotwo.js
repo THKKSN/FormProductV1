@@ -280,7 +280,7 @@ const FormP3twotwo = ({ formValues, handleChange }) => {
             checked={formValues.cooperation === "9"}
             onChange={handleChange}
           />
-          ยินดีที่จะปฏิบัติงานเมื่อไม่มีคนสมัครใจ (9)
+         มีความตั้งใจและให้ความร่วมมือในการปฏิบัติงานร่วมกันจนบรรลุผลอย่างมีประสิทธิภาพ (9)
         </label>
       </div>
       <div>
@@ -296,7 +296,7 @@ const FormP3twotwo = ({ formValues, handleChange }) => {
             checked={formValues.cooperation === "7"}
             onChange={handleChange}
           />
-          ยินดีปฏิบัติงานตามคำสั่งทั้งในและนอกเวลางาน (7)
+         มีความตั้งใจ ที่จะทำงานและร่วมมือปฏิบัติงานร่วมกับผู้อื่น (7)
         </label>
       </div>
       <div>
@@ -312,7 +312,7 @@ const FormP3twotwo = ({ formValues, handleChange }) => {
             checked={formValues.cooperation === "5"}
             onChange={handleChange}
           />
-          ยินดีปฏิบัติงานถ้าไม่กระทบเรื่องส่วนตัว(เลือกงาน) (5)
+         มีความร่วมมือในการปฏิบัติงานตามหน้าที่พอสมควร (5)
         </label>
       </div>
       <div>
@@ -328,7 +328,7 @@ const FormP3twotwo = ({ formValues, handleChange }) => {
             checked={formValues.cooperation === "3"}
             onChange={handleChange}
           />
-          มีพฤติกรรมในการหลบเลี่ยงงาน (3)
+         มักมีข้อขัดแย้งในการร่วมมือกับผู้อื่นอย่างไม่มีเหตุผล (3)
         </label>
       </div>
     </div>

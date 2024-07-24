@@ -5,7 +5,7 @@ const FormP3two = ({ formValues, handleChange }) => {
     return(
         <div>
             <br></br>
-            <p className="p-header">2. สมรรถนะกำลังพล</p>
+            <h6>2. สมรรถนะกำลังพล</h6>
             <p className="form-group">2.1 คุณลักษณะ</p>
             <p>2.1.1 บุคลิกภาพ</p>
         <div>
