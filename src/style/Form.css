@@ -7,7 +7,6 @@
 
 body{
   background-color: #282c34;
-  min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,9 +14,6 @@ body{
   font-size: calc(10px + 2vmin);
   color: #fff;
   text-align: center;
-}
-.header-container{
-  margin-top: 50vh;
 }
 .submit{
   border-radius: 25px ;
@@ -29,4 +25,13 @@ body{
 }
 .submit:hover{
   background-color: #4eaf45;
+}
+
+
+@media (max-width: 600px) {
+  .form-container {
+      max-width: 300px;
+      margin: 20px;
+      padding: 15px;
+  }
 }

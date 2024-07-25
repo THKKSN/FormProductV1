@@ -4,7 +4,7 @@ import "../style/P3.css";
 const FormP3one = ({ formValues, handleChange }) => {
   return (
     <div>
-      <h5>ตอนที่ 3 การประเมินค่า ฯ (ผู้ประเมินเป็นผู้กรอก)</h5>
+      <h5>ตอนที่ 3 การประเมินค่า ฯ</h5>
       <h6>ผลสัมฤทธิ์ของงาน</h6>
       <p className="form-group">1.1 กลุ่มงานประจำ</p>
       <div>

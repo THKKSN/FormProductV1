@@ -4,7 +4,7 @@ import "../style/P1.css";
 const FormP1 = ({ formValues, handleChange }) => {
   return (
     <div>
-      <h5>ตอนที่ 1 : ข้อมูลผู้รับการประเมิน (ผู้รับการประเมินเป็นผู้กรอก)</h5>
+      <h5>ตอนที่ 1 : ข้อมูลผู้รับการประเมิน</h5>
       <div className="form-group">
         <label htmlFor="Name">ยศ-ชื่อ-สกุล</label>
         <input
