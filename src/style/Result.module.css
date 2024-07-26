@@ -1,52 +1,71 @@
+body {
+  background-color: #fff;
+}
+
+h2, h1 {
+  color: #000;
+}
+
+.container {
+  display: flex;
+  flex-direction: row; /* เรียงกราฟและตารางในแนวตั้ง */
+
+  justify-content: center; /* จัดตำแหน่งกราฟและตารางตรงกลางแนวตั้ง */
+  min-height: 100vh; /* ให้ความสูงอย่างน้อยของ container เท่ากับความสูงของหน้าจอ */
+  padding: 20px;
+  box-sizing: border-box; /* รวม padding และ border เข้ากับขนาดรวมของ container */
+}
+
+.graphContainer, .tableContainer {
+  max-width: 100%;
+  margin: 20px 0; /* ระยะห่างระหว่างกราฟและตาราง */
+}
+
 .tableContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #f9f9f9;
+  width: 100%; /* ให้ตารางขยายเต็มความกว้างของ container */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse; /* รวมขอบเซลล์ */
+  border: 1px solid rgb(163, 163, 163); /* ขอบของตาราง */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5); /* เงาของตาราง */
+  font-size: 12px; /* ขนาดตัวอักษรในตาราง */
+  margin: 0 auto; /* จัดตำแหน่งตารางกลาง */
+}
+
+th, td {
+  border: 1px solid rgb(163, 163, 163); /* ขอบของเซลล์ */
+  padding: 8px; /* ระยะห่างภายในเซลล์ */
+  text-align: left; /* การจัดตำแหน่งตัวอักษรในเซลล์ */
+  color: #000; /* สีของตัวอักษร */
+}
+
+th {
+  background-color: #000; /* สีพื้นหลังของหัวตาราง */
+  color: #fff; /* สีของตัวอักษรในหัวตาราง */
+}
+
+thead tr:first-child th {
+  background-color: #ff0000; /* สีพื้นหลังของแถวแรกในหัวตาราง */
+  text-align: center; /* การจัดตำแหน่งตัวอักษรในหัวตาราง */
+}
+
+td[colspan="2"] {
+  font-weight: bold; /* ทำให้ตัวอักษรหนา */
+  text-align: center;
 }
 
 .centerContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #f9f9f9;
+  text-align: center; /* การจัดตำแหน่งตัวอักษรในเซลล์ให้กึ่งกลาง */
 }
 
-.center {
-    text-align: center;
-}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* เรียงกราฟและตารางในแนวตั้งบนหน้าจอขนาดเล็ก */
+  }
 
-.sectionTitle {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 10px 0;
-    padding: 10px;
-    border-bottom: 2px solid #ccc;
-}
-
-.sectionContent {
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #f5f5f5;
-}
-
-.sectionItem {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-}
-
-.sectionItem p {
-    margin: 0;
-    padding: 0 10px;
+  .graphContainer, .tableContainer {
+    width: 100%; /* ให้กราฟและตารางขยายเต็มความกว้างของหน้าจอ */
+  }
 }
