@@ -254,14 +254,14 @@ const FormP3twotwo = ({ formValues, handleChange }) => {
       <div>
         <label
           className="point-container table-container"
-          htmlFor="cooperation-1"
+          htmlFor="cooperate-1"
         >
           <input
             type="radio"
-            id="cooperation-1"
-            name="cooperation"
+            id="cooperate-1"
+            name="cooperate"
             value="10"
-            checked={formValues.cooperation === "10"}
+            checked={formValues.cooperate === "10"}
             onChange={handleChange}
           />
           มีความตั้งใจและเต็มใจให้ความร่วมมือในการปฏิบัติงานร่วมกันจนบรรลุผลอย่างมีประสิทธิภาพอย่างเต็มที่ (10)
@@ -270,14 +270,14 @@ const FormP3twotwo = ({ formValues, handleChange }) => {
       <div>
         <label
           className="point-container table-container"
-          htmlFor="cooperation-2"
+          htmlFor="cooperate-2"
         >
           <input
             type="radio"
-            id="cooperation-2"
-            name="cooperation"
+            id="cooperate-2"
+            name="cooperate"
             value="9"
-            checked={formValues.cooperation === "9"}
+            checked={formValues.cooperate === "9"}
             onChange={handleChange}
           />
          มีความตั้งใจและให้ความร่วมมือในการปฏิบัติงานร่วมกันจนบรรลุผลอย่างมีประสิทธิภาพ (9)
@@ -286,14 +286,14 @@ const FormP3twotwo = ({ formValues, handleChange }) => {
       <div>
         <label
           className="point-container table-container"
-          htmlFor="cooperation-3"
+          htmlFor="cooperate-3"
         >
           <input
             type="radio"
-            id="cooperation-3"
-            name="cooperation"
+            id="cooperate-3"
+            name="cooperate"
             value="7"
-            checked={formValues.cooperation === "7"}
+            checked={formValues.cooperate === "7"}
             onChange={handleChange}
           />
          มีความตั้งใจ ที่จะทำงานและร่วมมือปฏิบัติงานร่วมกับผู้อื่น (7)
@@ -302,14 +302,14 @@ const FormP3twotwo = ({ formValues, handleChange }) => {
       <div>
         <label
           className="point-container table-container"
-          htmlFor="cooperation-4"
+          htmlFor="cooperate-4"
         >
           <input
             type="radio"
-            id="cooperation-4"
-            name="cooperation"
+            id="cooperate-4"
+            name="cooperate"
             value="5"
-            checked={formValues.cooperation === "5"}
+            checked={formValues.cooperate === "5"}
             onChange={handleChange}
           />
          มีความร่วมมือในการปฏิบัติงานตามหน้าที่พอสมควร (5)
@@ -318,14 +318,14 @@ const FormP3twotwo = ({ formValues, handleChange }) => {
       <div>
         <label
           className="point-container table-container"
-          htmlFor="cooperation-5"
+          htmlFor="cooperate-5"
         >
           <input
             type="radio"
-            id="cooperation-5"
-            name="cooperation"
+            id="cooperate-5"
+            name="cooperate"
             value="3"
-            checked={formValues.cooperation === "3"}
+            checked={formValues.cooperate === "3"}
             onChange={handleChange}
           />
          มักมีข้อขัดแย้งในการร่วมมือกับผู้อื่นอย่างไม่มีเหตุผล (3)

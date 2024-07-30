@@ -1,33 +1,32 @@
 .graphContainer {
-    padding: 20px;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-  }
-  
-  .chartText {
-    position: absolute;
-    top: 56%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    color: #000;
-  }
-  
-  .doughnutCanvas {
-    transition: transform 0.3s ease-in-out, z-index 0.3s;
-    z-index: 2;
-    mar: 10px; /* เพิ่ม padding รอบ ๆ canvas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เพิ่มขอบเงา */
-  }
-  
-  .graphContainer:hover .doughnutCanvas {
-    transform: scale(1.2);
-    z-index: 3;
-  }
-  
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.chartText {
+  position: absolute;
+  top: 56%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #f5c800;
+}
+
+.doughnutCanvas {
+  margin: 10px; /* Added margin around the canvas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box-shadow */
+  transition: transform 0.3s ease-in-out, z-index 0.3s; /* Smooth transition on hover */
+  z-index: 2;
+}
+
+.graphContainer:hover .doughnutCanvas {
+  transform: scale(1.2);
+  z-index: 3;
+}

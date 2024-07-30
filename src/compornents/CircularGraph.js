@@ -15,7 +15,7 @@ const CircularGraph = ({ data, labels, evaluation }) => {
         borderColor: ["rgba(255, 99, 132, 1)", "rgba(0, 250, 50, 1)"],
         borderWidth: 1,
         hoverOffset: 30, // This will add an offset to the segment when hovered
-
+        
       },
     ],
   };

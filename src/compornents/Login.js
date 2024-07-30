@@ -1,7 +1,7 @@
 // components/Login.js
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import '../style/User.css';
+import '../style/User.css'; // Ensure the path is correct
 
 const Login = ({ onLogin }) => {
     const [username, setUsername] = useState("");
@@ -12,7 +12,7 @@ const Login = ({ onLogin }) => {
     const handleLogin = (event) => {
         event.preventDefault();
 
-        // ตรวจสอบข้อมูลล็อกอิน (คุณสามารถเปลี่ยนเป็นการตรวจสอบจริงจากเซิร์ฟเวอร์)
+        // Simulate login validation (replace with actual server validation if needed)
         if (username.toLowerCase() === "admin" && password === "admin123456") {
             onLogin(true);
             navigate("/form");

@@ -2,7 +2,7 @@
   background: #fff;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px #0000001a;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
   width: 500px;
   margin: 50px auto; /* auto ที่เขียนไว้ที่ margin จะช่วยให้ form-container อยู่ตรงกลาง */
   justify-content: center;

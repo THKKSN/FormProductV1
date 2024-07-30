@@ -2,21 +2,22 @@ body {
   background-color: #fff;
 }
 
-h2, h1 {
+h2,
+h1 {
   color: #000;
 }
 
 .container {
   display: flex;
   flex-direction: row; /* เรียงกราฟและตารางในแนวตั้ง */
-
   justify-content: center; /* จัดตำแหน่งกราฟและตารางตรงกลางแนวตั้ง */
   min-height: 100vh; /* ให้ความสูงอย่างน้อยของ container เท่ากับความสูงของหน้าจอ */
   padding: 20px;
   box-sizing: border-box; /* รวม padding และ border เข้ากับขนาดรวมของ container */
 }
 
-.graphContainer, .tableContainer {
+.graphContainer,
+.tableContainer {
   max-width: 100%;
   margin: 20px 0; /* ระยะห่างระหว่างกราฟและตาราง */
 }
@@ -34,7 +35,8 @@ table {
   margin: 0 auto; /* จัดตำแหน่งตารางกลาง */
 }
 
-th, td {
+th,
+td {
   border: 1px solid rgb(163, 163, 163); /* ขอบของเซลล์ */
   padding: 8px; /* ระยะห่างภายในเซลล์ */
   text-align: left; /* การจัดตำแหน่งตัวอักษรในเซลล์ */
@@ -60,12 +62,20 @@ td[colspan="2"] {
   text-align: center; /* การจัดตำแหน่งตัวอักษรในเซลล์ให้กึ่งกลาง */
 }
 
+.evaluationText {
+  font-size: 30px;
+  font-weight: bold;
+}
+
 @media (max-width: 768px) {
   .container {
-    flex-direction: column; /* เรียงกราฟและตารางในแนวตั้งบนหน้าจอขนาดเล็ก */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
-  .graphContainer, .tableContainer {
+  .graphContainer,
+  .tableContainer {
     width: 100%; /* ให้กราฟและตารางขยายเต็มความกว้างของหน้าจอ */
   }
 }

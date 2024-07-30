@@ -1,4 +1,3 @@
-// App.js
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import axios from "axios";
@@ -37,6 +36,7 @@ function App() {
         sense: 0,
         development: 0,
         vision: 0,
+        cooperate: 0,
     };
 
     const [formValues, setFormValues] = useState(initialFormValues);
@@ -59,7 +59,7 @@ function App() {
         }
 
         setError("");
-        console.log("Form values:", formValues);
+        console.log("Form values before submission:", formValues);
 
         try {
             const response = await axios.post("http://localhost:5000/submit", formValues, {
@@ -67,48 +67,36 @@ function App() {
                     "Content-Type": "application/json",
                 },
             });
-            console.log("Response:", response.data);
+            console.log("Response from server:", response.data);
             setFormValues(initialFormValues);
         } catch (error) {
-            console.error("There was an error!", error);
+            console.error("There was an error submitting the form:", error);
         }
     };
 
     return (
-        // <Router>
-        //     <Routes>
-        //         <Route
-        //             path="/login"
-        //             element={<Login onLogin={setIsLoggedIn} />}
-        //         />
-        //         <Route
-        //             path="/form"
-        //             element={
-        //                 isLoggedIn ? (
-        //                     <FormPage
-        //                         formValues={formValues}
-        //                         handleChange={handleChange}
-        //                         handleSubmit={handleSubmit}
-        //                         error={error}
-        //                     />
-        //                 ) : (
-        //                     <Navigate to="/login" />
-        //                 )
-        //             }
-        //         />
-        //         <Route
-        //             path="/initial-values"
-        //             element={<ResultPage initialFormValues={initialFormValues} />}
-        //         />
-        //         <Route
-        //             path="*"
-        //             element={<Navigate to="/login" />}
-        //         />
-        //     </Routes>
-        // </Router>
-        <div>
-            <ResultPage initialFormValues={initialFormValues}/>
-        </div>
+        <Router>
+            <Routes>
+                <Route path="/login" element={<Login onLogin={setIsLoggedIn} />} />
+                <Route
+                    path="/form"
+                    element={
+                        isLoggedIn ? (
+                            <FormPage
+                                formValues={formValues}
+                                handleChange={handleChange}
+                                handleSubmit={handleSubmit}
+                                error={error}
+                            />
+                        ) : (
+                            <Navigate to="/login" />
+                        )
+                    }
+                />
+                <Route path="/result" element={<ResultPage />} />
+                <Route path="*" element={<Navigate to="/login" />} />
+            </Routes>
+        </Router>
     );
 }
 
