@@ -2,8 +2,7 @@ body {
   background-color: #fff;
 }
 
-h2,
-h1 {
+h2 {
   color: #000;
 }
 
@@ -64,6 +63,11 @@ td[colspan="2"] {
 
 .evaluationText {
   font-size: 30px;
+  font-weight: bold;
+}
+
+.rightContainer{
+  text-align: right;
   font-weight: bold;
 }
 

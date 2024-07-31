@@ -1,6 +1,5 @@
 import React from "react";
-import "../style/P3.css";
-
+import "../style/P3.module.css";
 const FormP3onetwo = ({ formValues, handleChange }) => {
   return (
     <div>

@@ -22,7 +22,7 @@ const FormPage = ({ formValues, handleChange, handleSubmit, error }) => {
         <div>
             <h2 className="header-container">แบบประเมินผลการปฏิบัติงานของพนักงาน อผศ. และลูกจ้างประจำหน่วยงานกิจการพิเศษ</h2>
             <form onSubmit={onSubmit} className="form-container">
-                <FormP1 formValues={formValues} handleChange={handleChange} />
+                {/* <FormP1 formValues={formValues} handleChange={handleChange} /> */}
                 <FormP3one formValues={formValues} handleChange={handleChange} />
                 <FormP3onetwo formValues={formValues} handleChange={handleChange} />
                 <FormP3two formValues={formValues} handleChange={handleChange} />

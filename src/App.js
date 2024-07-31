@@ -7,6 +7,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import Login from "./compornents/Login";
 import FormPage from "./compornents/FormPage";
 import ResultPage from "./compornents/ResultPage";
+import Home from "./compornents/Home"
 
 function App() {
     const initialFormValues = {
@@ -97,6 +98,9 @@ function App() {
                 <Route path="*" element={<Navigate to="/login" />} />
             </Routes>
         </Router>
+        // <div>
+        //     <Home />
+        // </div>
     );
 }
 

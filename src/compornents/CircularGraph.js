@@ -1,9 +1,28 @@
+// Assuming getEvaluationColor is imported or defined in the same file
+
 import React from "react";
 import { Doughnut } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import styles from "../style/CircularGraph.module.css";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
+
+const getEvaluationColor = (criteria) => {
+    switch (criteria) {
+        case "ดีเด่น":
+            return "#108600c4";
+        case "ดีมาก":
+            return "#16be00c4";
+        case "ดี":
+            return "#f5c800";
+        case "พอใช้":
+            return "#ffa500";
+        case "ต้องปรับปรุง":
+            return "#f00";
+        default:
+            return "#000";
+    }
+};
 
 const CircularGraph = ({ data, labels, evaluation }) => {
   const chartData = {
@@ -15,7 +34,6 @@ const CircularGraph = ({ data, labels, evaluation }) => {
         borderColor: ["rgba(255, 99, 132, 1)", "rgba(0, 250, 50, 1)"],
         borderWidth: 1,
         hoverOffset: 30, // This will add an offset to the segment when hovered
-        
       },
     ],
   };
@@ -25,12 +43,12 @@ const CircularGraph = ({ data, labels, evaluation }) => {
       tooltip: {
         callbacks: {
           label: function (context) {
-            let label = context.label || "%";
+            let label = context.label;
             if (label) {
               label += ": ";
             }
             if (context.parsed !== null) {
-              label += context.parsed + "%";
+              label += context.parsed;
             }
             return label;
           },
@@ -47,10 +65,15 @@ const CircularGraph = ({ data, labels, evaluation }) => {
     },
   };
 
+  // Log the evaluation value and the corresponding color
+  console.log(`Evaluation: ${evaluation}`);
+  const evaluationColor = getEvaluationColor(evaluation);
+  console.log(`Color: ${evaluationColor}`);
+
   return (
     <div className={styles.graphContainer}>
       <Doughnut data={chartData} options={options} />
-      <div className={styles.chartText}>
+      <div className={styles.chartText} style={{ color: evaluationColor }}>
         <h1>{evaluation}</h1>
       </div>
     </div>

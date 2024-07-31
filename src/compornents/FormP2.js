@@ -1,5 +1,5 @@
 import React from "react";
-import "../style/P1.css"; // ต้องแก้ไขเป็นที่อยู่ CSS ที่ถูกต้อง
+import "../style/P1.css";
 import "../style/P2.css";
 
 function FormP2({ form, handleChange }) {

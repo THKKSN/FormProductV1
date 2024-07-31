@@ -1,5 +1,5 @@
 import React from "react";
-import "../style/P3.css";
+import "../style/P3.module.css";
 
 const FormP3one = ({ formValues, handleChange }) => {
   return (
@@ -16,7 +16,7 @@ const FormP3one = ({ formValues, handleChange }) => {
           >
             <input
               type="radio"
-              id="quantity-1"
+              id="quantity-1"     
               name="quantity"
               value="20"
               checked={formValues.quantity === "20"}

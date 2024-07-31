@@ -120,10 +120,10 @@ const ResultPage = () => {
 
     return (
         <div>
-            <h2>ตอนที่ 4 ผลการประเมิน</h2>
+            <h2>ผลการประเมิน</h2>
             <div className={styles.container}>
                 <div className={styles.graphContainer}>
-                    <CircularGraph data={data} labels={["ผลสัมฤทธิ์ของงาน (ร้อยละ) (C)", "สมรรถนะกำลังพล (ร้อยละ) (D)"]} evaluation={evaluation} />
+                    <CircularGraph data={data} labels={["ผลสัมฤทธิ์ของงาน", "สมรรถนะกำลังพล"]} evaluation={evaluation} />
                     <div
                         className={styles.evaluationText}
                         style={{ color: evaluationColor }} // Set color based on evaluation
@@ -149,109 +149,109 @@ const ResultPage = () => {
                             </tr>
                             <tr>
                                 <td>1.1.1 ปริมาณงาน</td>
-                                <td>{quantity}</td>
+                                <td className= {styles.rightContainer}>{quantity}</td>
                             </tr>
                             <tr>
                                 <td>1.1.2 ผลสำเร็จของงาน</td>
-                                <td>{achievement}</td>
+                                <td className= {styles.rightContainer}>{achievement}</td>
                             </tr>
                             <tr>
                                 <td>1.1.3 ความเร่งด่วนในการทำงาน</td>
-                                <td>{reliability}</td>
+                                <td className= {styles.rightContainer}>{reliability}</td>
                             </tr>
                             <tr>
                                 <td>1.1.4 ความทันเวลา</td>
-                                <td>{justinTime}</td>
+                                <td className= {styles.rightContainer}>{justinTime}</td>
                             </tr>
                             <tr>
                                 <td>1.1.5 การประหยัด</td>
-                                <td>{saving}</td>
+                                <td className= {styles.rightContainer}>{saving}</td>
                             </tr>
                             <tr>
                                 <td colSpan="2">1.2 กลุ่มงานมอบหมาย (เต็ม 250 คะแนน)</td>
                             </tr>
                             <tr>
                                 <td>1.2.1 ผลสำเร็จของงาน</td>
-                                <td>{finallyValue}</td>
+                                <td className= {styles.rightContainer}>{finallyValue}</td>
                             </tr>
                             <tr>
                                 <td>1.2.2 คุณภาพของผลงาน</td>
-                                <td>{qualityOfWork}</td>
+                                <td className= {styles.rightContainer}>{qualityOfWork}</td>
                             </tr>
                             <tr>
                                 <td>1.2.3 ความเชื่อถือได้ของผลงาน</td>
-                                <td>{reliabilityOfTheWork}</td>
+                                <td className= {styles.rightContainer}>{reliabilityOfTheWork}</td>
                             </tr>
                             <tr>
                                 <td>1.2.4 ความทันเวลา</td>
-                                <td>{timeLiness}</td>
+                                <td className= {styles.rightContainer}>{timeLiness}</td>
                             </tr>
                             <tr>
-                                <td>รวมคะแนนผลสัมฤทธิ์ของงาน (A) (เต็ม 350 คะแนน)</td>
-                                <td>{combinedTotal}</td>
+                                <td>รวมคะแนนผลสัมฤทธิ์ของงาน (เต็ม 350 คะแนน)</td>
+                                <td className= {styles.rightContainer}>{combinedTotal}</td>
                             </tr>
                             <tr>
                                 <td colSpan="2">สมรรถนะกำลังพล</td>
                             </tr>
                             <tr>
                                 <td>2.1.1 บุคลิกภาพ</td>
-                                <td>{personality}</td>
+                                <td className= {styles.rightContainer}>{personality}</td>
                             </tr>
                             <tr>
                                 <td>2.1.2 การรักษาวินัย</td>
-                                <td>{maintaining}</td>
+                                <td className= {styles.rightContainer}>{maintaining}</td>
                             </tr>
                             <tr>
                                 <td>2.2.1 ความสามารถในการติดต่อสื่อสาร</td>
-                                <td>{communication}</td>
+                                <td className= {styles.rightContainer}>{communication}</td>
                             </tr>
                             <tr>
                                 <td>2.2.2 มนุษยสัมพันธ์</td>
-                                <td>{relationship}</td>
+                                <td className= {styles.rightContainer}>{relationship}</td>
                             </tr>
                             <tr>
                                 <td>2.2.3 ความเสียสละ</td>
-                                <td>{sacrifice}</td>
+                                <td className= {styles.rightContainer}>{sacrifice}</td>
                             </tr>
                             <tr>
                                 <td>2.2.4 ความร่วมมือ</td>
-                                <td>{cooperate}</td>
+                                <td className= {styles.rightContainer}>{cooperate}</td>
                             </tr>
                             <tr>
                                 <td>2.3.1 การปฏิบัติตน</td>
-                                <td>{conduct}</td>
+                                <td className= {styles.rightContainer}>{conduct}</td>
                             </tr>
                             <tr>
                                 <td>2.3.2 การตรงต่อเวลา</td>
-                                <td>{punctuality}</td>
+                                <td className= {styles.rightContainer}>{punctuality}</td>
                             </tr>
                             <tr>
                                 <td>2.4.1 ความมุ่งเน้นผลสัมฤทธิ์</td>
-                                <td>{focus}</td>
+                                <td className= {styles.rightContainer}>{focus}</td>
                             </tr>
                             <tr>
                                 <td>2.4.2 ความริเริ่ม</td>
-                                <td>{initiative}</td>
+                                <td className= {styles.rightContainer}>{initiative}</td>
                             </tr>
                             <tr>
                                 <td>2.5.1 ความรอบรู้งานในหน้าที่</td>
-                                <td>{knowledge}</td>
+                                <td className= {styles.rightContainer}>{knowledge}</td>
                             </tr>
                             <tr>
                                 <td>2.5.2 ความสำนึกในหน้าที่</td>
-                                <td>{sense}</td>
+                                <td className= {styles.rightContainer}>{sense}</td>
                             </tr>
                             <tr>
                                 <td>2.6.1 การพัฒนาตนและผู้ใต้บังคับบัญชาหรือเพื่อนร่วมงาน</td>
-                                <td>{development}</td>
+                                <td className= {styles.rightContainer}>{development}</td>
                             </tr>
                             <tr>
                                 <td>2.6.2 วิสัยทัศน์และความคิดในภาพรวม</td>
-                                <td>{vision}</td>
+                                <td className= {styles.rightContainer}>{vision}</td>
                             </tr>
                             <tr>
-                                <td>รวมคะแนนสมรรถนะที่คาดหวัง (B) (เต็ม 150 คะแนน)</td>
-                                <td>{competencyQuantity}</td>
+                                <td>รวมคะแนนสมรรถนะที่คาดหวัง (เต็ม 150 คะแนน)</td>
+                                <td className= {styles.rightContainer}>{competencyQuantity}</td>
                             </tr>
                         </tbody>
                     </table>

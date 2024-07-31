@@ -10,13 +10,12 @@
 
 .chartText {
   position: absolute;
-  top: 56%;
+  top: 54%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   font-size: 18px;
   font-weight: bold;
-  color: #f5c800;
 }
 
 .doughnutCanvas {
