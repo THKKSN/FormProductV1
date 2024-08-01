@@ -7,7 +7,7 @@ label{
 }
   
 
-  .container {
+  .Container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,7 +27,7 @@ label{
     border-radius: 8px; 
   }
   
-  .point-container {
+  .pointContainer {
     display: block;
     margin: 10px 0;
     cursor: pointer; 
@@ -37,15 +37,13 @@ label{
     transition: background-color 0.3s;
   }
   
-  .point-container.selected {
+  .pointContainer.selected {
     background-color: lightgreen;
   }
   
-  .hidden-radio {
-    display: none;
-  }
+
   
-  .point-container:hover {
+  .pointContainer:hover {
     background-color: #ccc;
   }
   

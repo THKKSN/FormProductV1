@@ -7,7 +7,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import Login from "./compornents/Login";
 import FormPage from "./compornents/FormPage";
 import ResultPage from "./compornents/ResultPage";
-import Home from "./compornents/Home"
+// import Assessor from "./compornents/Assessor";
 
 function App() {
     const initialFormValues = {
@@ -99,7 +99,7 @@ function App() {
             </Routes>
         </Router>
         // <div>
-        //     <Home />
+        //     <Assessor/>
         // </div>
     );
 }
