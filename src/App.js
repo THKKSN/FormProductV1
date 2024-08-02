@@ -7,7 +7,10 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import Login from "./compornents/Login";
 import FormPage from "./compornents/FormPage";
 import ResultPage from "./compornents/ResultPage";
-// import Assessor from "./compornents/Assessor";
+import Assessor from "./compornents/Assessor";
+import Home from "./compornents/Home";
+import FormP2 from "./compornents/FormP2";
+
 
 function App() {
     const initialFormValues = {
@@ -79,6 +82,8 @@ function App() {
         <Router>
             <Routes>
                 <Route path="/login" element={<Login onLogin={setIsLoggedIn} />} />
+                <Route path="/" element={isLoggedIn ? <Navigate to="/home" /> : <Navigate to="/login" />} />
+                <Route path="/home" element={isLoggedIn ? <Home /> : <Navigate to="/login" />} />
                 <Route
                     path="/form"
                     element={
@@ -94,13 +99,34 @@ function App() {
                         )
                     }
                 />
-                <Route path="/result" element={<ResultPage />} />
+                <Route
+                    path="/form-p2"
+                    element={
+                        isLoggedIn ? (
+                            <FormP2
+                                formValues={formValues}
+                                handleChange={handleChange}
+                                handleSubmit={handleSubmit}
+                                error={error}
+                            />
+                        ) : (
+                            <Navigate to="/login" />
+                        )
+                    }
+                />
+                <Route
+                    path="/assessor"
+                    element={isLoggedIn ? <Assessor /> : <Navigate to="/login" />}
+                />
+                <Route
+                    path="/dashboard"
+                    element={
+                        isLoggedIn ? <ResultPage /> : <Navigate to="/login" />
+                    }
+                />
                 <Route path="*" element={<Navigate to="/login" />} />
             </Routes>
         </Router>
-        // <div>
-        //     <Assessor/>
-        // </div>
     );
 }
 

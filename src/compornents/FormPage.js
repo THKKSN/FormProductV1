@@ -1,6 +1,5 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import FormP1 from "./FormP1";
 import FormP3one from "./FormP3one";
 import FormP3onetwo from "./FormP3onetwo";
 import FormP3two from "./FormP3two";
@@ -20,9 +19,9 @@ const FormPage = ({ formValues, handleChange, handleSubmit, error }) => {
 
     return (
         <div>
+            <button className="back-button-container" onClick={() => navigate('/')}>Go to Home</button>
             <h2 className="header-container">แบบประเมินผลการปฏิบัติงานของพนักงาน อผศ. และลูกจ้างประจำหน่วยงานกิจการพิเศษ</h2>
             <form onSubmit={onSubmit} className="form-container">
-                {/* <FormP1 formValues={formValues} handleChange={handleChange} /> */}
                 <FormP3one formValues={formValues} handleChange={handleChange} />
                 <FormP3onetwo formValues={formValues} handleChange={handleChange} />
                 <FormP3two formValues={formValues} handleChange={handleChange} />

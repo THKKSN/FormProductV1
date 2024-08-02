@@ -1,20 +1,25 @@
-import React, { useState } from "react";
-import "../style/Assessor.css"; // Import your CSS file
+// components/Assessor.js
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import "../style/Assessor.css";
 
 const Assessor = () => {
+  const [evaluators, setEvaluators] = useState([]);
   const [selectedEvaluator, setSelectedEvaluator] = useState("");
   const [isEvaluatorSelected, setIsEvaluatorSelected] = useState(false);
-//   const username = process.env.REACT_APP_USERNAME;
-//   const password = process.env.REACT_APP_PASSWORD;
-  
-  // ใช้ตัวแปรในฟอร์มหรือการประเมิน
-  
-  const evaluators = [
-    { name: "นายทายวุฒิ สุภัคนิกร", position: "หัวหน้านักวิชาการคอมพิวเตอร์" },
-    { name: "นางสาวกรสุดา ถนอมชาติ", position: "ผู้ช่วยหัวหน้าแผนกนักวิชาการคอมพิวเตอร์" },
-    { name: "นายสาวณัฏฐานันตร์ จันทร์เมือง", position: "นักวิชาการคอมพิวเตอร์ 5" },
-    { name: "นางสาวกันย์ลภัส ทองสุข", position: "นักวิชาการคอมพิวเตอร์" },
-  ];
+
+  useEffect(() => {
+    const fetchEvaluators = async () => {
+      try {
+        const response = await axios.get("http://localhost:5000/evaluators");
+        setEvaluators(response.data);
+      } catch (error) {
+        console.error("Error fetching evaluators:", error);
+      }
+    };
+
+    fetchEvaluators();
+  }, []);
 
   const handleEvaluatorChange = (event) => {
     setSelectedEvaluator(event.target.value);
@@ -29,7 +34,7 @@ const Assessor = () => {
   };
 
   return (
-    <div className="Container">
+    <div className="container">
       <form>
         {!isEvaluatorSelected ? (
           <div>
@@ -39,7 +44,7 @@ const Assessor = () => {
                 <label
                   key={index}
                   className={`pointContainer ${
-                    selectedEvaluator === evaluator.name ? "selected" : ""
+                    selectedEvaluator === evaluator.Name ? "selected" : ""
                   }`}
                   htmlFor={`evaluator-${index}`}
                 >
@@ -47,12 +52,12 @@ const Assessor = () => {
                     type="radio"
                     id={`evaluator-${index}`}
                     name="evaluator"
-                    value={evaluator.name}
-                    checked={selectedEvaluator === evaluator.name}
+                    value={evaluator.Name}
+                    checked={selectedEvaluator === evaluator.Name}
                     onChange={handleEvaluatorChange}
                     className="hidden-radio"
                   />
-                  {evaluator.name} <br />({evaluator.position})
+                  {evaluator.Name} <br />({evaluator.Department})
                 </label>
               ))}
               <button type="button" onClick={handleConfirm}>
@@ -62,7 +67,6 @@ const Assessor = () => {
           </div>
         ) : (
           <div>ผู้รับการประเมิน : {selectedEvaluator}</div>
-          
         )}
       </form>
     </div>

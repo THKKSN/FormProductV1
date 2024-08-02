@@ -14,7 +14,7 @@ const ResultPage = () => {
         return (
             <div>
                 <p>ไม่มีข้อมูลในการแสดงผล</p>
-                <button onClick={() => navigate('/form')}>กลับไปที่ฟอร์ม</button>
+                <button onClick={() => navigate('/Home')}>กลับไปที่หน้าหลัก</button>
             </div>
         );
     }

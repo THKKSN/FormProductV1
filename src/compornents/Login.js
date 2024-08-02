@@ -15,7 +15,7 @@ const Login = ({ onLogin }) => {
         // Simulate login validation (replace with actual server validation if needed)
         if (username.toLowerCase() === "admin" && password === "admin123456") {
             onLogin(true);
-            navigate("/form");
+            navigate("/Home");
         } else {
             setError("ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง");
         }
